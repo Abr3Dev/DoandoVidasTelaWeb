@@ -47,18 +47,34 @@
                             <div class="form-row align-items-center" id="div-formulario">
                               <div class="col-auto ">
                                 <label class="sr-only" for="inlineFormInput">CPF</label>
-                                <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="CPF">
+                                <input type="text" class="form-control mb-2" id="txtCPF" placeholder="CPF">
                               </div>
                               <div class="col-auto">
-                                <button type="submit" class="btn btn-primary mb-2" id="inicioLogoDVBtn">Buscar</button>
+                                <button type="submit"  onclick="Mudarestado('minhaDiv')" class="btn btn-primary mb-2" id="inicioLogoDVBtn">Buscar</button>
                               </div>
                             </div>
                           </form>
-                        </p>
+                            <script>
+                                    function Mudarestado(el) {
+                                        var display = document.getElementById(el).style.display;
+                                        if (display == "none")
+                                        document.getElementById(el).style.display = 'block';
+                                        else
+                                        document.getElementById(el).style.display = 'none';
+                                    }
+                            </script>
+                          <div class="retornoAPI" id="minhaDiv" style="display:none">
+                            <p>Dados encontrado do paciente: </p>
+                                <p id="name"> Nome: </p>
+                                <p id="email"> E-mail: </p>
+                                <p id="cpf"> CPF:</p>
+                                <p id="birthDate"> Data de Nascimento: </p>
+                                <p id="gender"> Sexo: </p>
+                                <p id="message"> Menssagem: </p>
+                                <p id="video"> Video: </p>
+                          </div>     
                     </div>
-                    
                 </div>
-              
             </div>
         </section>
         <!-- Projects-->
@@ -108,5 +124,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/scriptsAPI.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+
     </body>
 </html>
