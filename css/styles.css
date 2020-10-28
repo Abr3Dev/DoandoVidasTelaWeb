@@ -53,6 +53,9 @@
 #inicioLogoDVBtn{
   background-color:#1b511c !important;
 }
+#div-formulario{
+  display: inline-flex;
+}
 
 html {
   font-family: sans-serif;
