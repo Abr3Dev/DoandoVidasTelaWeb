@@ -3,7 +3,7 @@ $(document).ready(function(){
         var CPF = $("#txtCPF").val();
         CPF = CPF.replace("-", "");
 
-        var urlStr ="http://localhost:8081/api/doandovidas/user/​​​​"+ CPF;​​​​​​​
+        var urlStr ="http://localhost:8083/api/doandovidas/user/​​​​"+ CPF;​​​​​​​
         
         $.ajax({
             url :  urlStr,
